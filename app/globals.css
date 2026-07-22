@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background: #0b0e14;
+  color: #e8eaf0;
+}
+
+input,
+select,
+textarea {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #232838;
+  border-radius: 8px;
+}
+
+@layer components {
+  .field-input {
+    @apply bg-bg border border-border text-text rounded-lg px-3 py-2.5 text-[15.5px] font-mono w-full focus:border-mint outline-none;
+  }
+  .field-label {
+    @apply text-[14px] text-muted;
+  }
+  .btn-action {
+    @apply bg-mint text-[#04201c] font-bold text-[15.5px] px-5 py-2.5 rounded-lg hover:brightness-110 transition;
+  }
+  .btn-ghost {
+    @apply bg-transparent border border-border text-muted text-[14.5px] px-4 py-2 rounded-lg hover:text-text hover:border-mint transition;
+  }
+  .result-box {
+    @apply mt-4 bg-bg border border-dashed border-border rounded-lg p-4 font-mono text-[15.5px] whitespace-pre-wrap break-all min-h-[20px];
+  }
+  .stat-box {
+    @apply bg-bg border border-border rounded-lg p-3 text-center;
+  }
+}
